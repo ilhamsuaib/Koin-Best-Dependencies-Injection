@@ -1,5 +1,6 @@
 package com.ilhamsuaib.koin.home
 
+import android.arch.lifecycle.ViewModel
 import com.ilhamsuaib.koin.repo.Repository
 
 /**
@@ -7,7 +8,7 @@ import com.ilhamsuaib.koin.repo.Repository
  * github.com/ilhamsuaib
  */
 
-class HomePresenter(val repo: Repository) {
+class HomeViewModel(private val repo: Repository): ViewModel() {
 
     fun sayHello() = repo.giveHello()
 }

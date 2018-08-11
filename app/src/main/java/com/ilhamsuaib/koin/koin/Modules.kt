@@ -1,6 +1,6 @@
 package com.ilhamsuaib.koin.koin
 
-import com.ilhamsuaib.koin.home.HomePresenter
+import com.ilhamsuaib.koin.home.HomeViewModel
 import com.ilhamsuaib.koin.repo.Repository
 import com.ilhamsuaib.koin.repo.RepositoryImpl
 import org.koin.dsl.module.Module
@@ -12,6 +12,6 @@ import org.koin.dsl.module.applicationContext
  */
 
 val myModule: Module = applicationContext {
-    factory { HomePresenter(get()) }
+    factory { HomeViewModel(get()) }
     bean { RepositoryImpl() as Repository }
 }
